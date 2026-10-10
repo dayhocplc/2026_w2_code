@@ -1,0 +1,20 @@
+W2-5 — CHI PHÍ TÍNH TOÁN (λ=0.003, γ=0.001; một luồng; ngân sách 900s)
+
+(A) Bài toán lồi có phạt: thời gian (s) | mục tiêu − tốt nhất | biên đơn điệu nhỏ nhất
+  sim_p5   p= 5 biến=   26 | reparam_lbfgsb     0.18s Δobj=2.7e-10 biên=+3.0e-01 | lincon_trust     4.10s Δobj=1.9e-07 biên=+3.0e-01 | lincon_slsqp     0.17s Δobj=0.0e+00 biên=+3.0e-01
+  sim_p10  p=10 biến=  101 | reparam_lbfgsb     0.24s Δobj=3.8e-10 biên=+0.0e+00 | lincon_trust    15.51s Δobj=4.2e-07 biên=+1.6e-05 | lincon_slsqp     1.69s Δobj=0.0e+00 biên=-1.1e-16
+  sim_p15  p=15 biến=  226 | reparam_lbfgsb     0.52s Δobj=9.5e-10 biên=+0.0e+00 | lincon_trust    58.56s Δobj=1.0e-06 biên=+1.3e-05 | lincon_slsqp    13.91s Δobj=0.0e+00 biên=-1.2e-16
+  sim_p20  p=20 biến=  401 | reparam_lbfgsb     0.85s Δobj=1.4e-08 biên=+0.0e+00 | lincon_trust   365.82s Δobj=1.7e-06 biên=+2.0e-05 | lincon_slsqp    70.89s Δobj=0.0e+00 biên=-1.1e-16
+  POL252   p=25 biến=  626 | reparam_lbfgsb     0.51s Δobj=2.1e-08 biên=+0.0e+00 | lincon_trust  1409.10s Δobj=2.7e-06 biên=+3.4e-05 | lincon_slsqp   402.31s Δobj=0.0e+00 biên=-4.2e-16
+  sim_p30  p=30 biến=  901 | reparam_lbfgsb     3.03s Δobj=5.9e-09 biên=-1.1e-16 | lincon_trust bỏ (vượt ngân sách ở p nhỏ hơn) | lincon_slsqp   936.26s Δobj=0.0e+00 biên=-3.2e-16
+  sim_p40  p=40 biến= 1601 | reparam_lbfgsb     6.17s Δobj=0.0e+00 biên=+0.0e+00 | lincon_trust bỏ (vượt ngân sách ở p nhỏ hơn) | lincon_slsqp bỏ (vượt ngân sách ở p nhỏ hơn)
+
+(B) Hợp lý cực đại (cùng họ choquistic): thời gian | NLL huấn luyện | S = γ
+  sim_p5   p= 5 | reparam    0.22s NLL=0.600853 S=7.08 | choquistic     0.05s NLL=0.600853 γ=7.08 hội tụ=True
+  sim_p10  p=10 | reparam    0.30s NLL=0.647844 S=5.88 | choquistic     1.11s NLL=0.647844 γ=5.88 hội tụ=True
+  sim_p15  p=15 | reparam    1.13s NLL=0.631753 S=7.83 | choquistic     6.64s NLL=0.631753 γ=7.83 hội tụ=True
+  sim_p20  p=20 | reparam    1.36s NLL=0.624352 S=11.55 | choquistic    30.86s NLL=0.624352 γ=11.55 hội tụ=True
+  POL252   p=25 | reparam    3.16s NLL=0.184959 S=40.47 | choquistic   173.12s NLL=0.184959 γ=40.47 hội tụ=True
+  sim_p30  p=30 | reparam    5.54s NLL=0.604160 S=15.58 | choquistic   392.97s NLL=0.604160 γ=15.58 hội tụ=True
+  sim_p40  p=40 | reparam    7.19s NLL=0.589657 S=21.18 | choquistic  2676.44s NLL=0.589657 γ=21.18 hội tụ=True
+Thời gian 71s

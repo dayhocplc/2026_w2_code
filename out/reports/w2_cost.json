@@ -1,0 +1,337 @@
+{
+ "lambda": 0.003,
+ "gamma": 0.001,
+ "time_cap": 900.0,
+ "runs": [
+  {
+   "case": "sim_p5",
+   "n": 500,
+   "p": 5,
+   "n_vars": 26,
+   "rows": {
+    "reparam_lbfgsb": {
+     "sec": 0.17838109994772822,
+     "obj": 0.6104835722405917,
+     "margin": 0.30431214505698234,
+     "converged": true,
+     "nit": 69,
+     "restarts": 0,
+     "kkt_residual": 2.2000768641217833e-06
+    },
+    "lincon_trust": {
+     "sec": 4.0950451999669895,
+     "obj": 0.6104837647944262,
+     "margin": 0.30443344835582625,
+     "converged": true,
+     "nit": 109,
+     "max_violation": 0.0
+    },
+    "lincon_slsqp": {
+     "sec": 0.1685646999394521,
+     "obj": 0.6104835719722802,
+     "margin": 0.3043936416978483,
+     "converged": true,
+     "nit": 72,
+     "max_violation": 0.0
+    },
+    "reparam_lbfgsb_ml": {
+     "sec": 0.21966549998614937,
+     "nll": 0.6008531970599481,
+     "margin": 0.0,
+     "converged": true,
+     "S": 7.082978905988533,
+     "restarts": 0,
+     "kkt_residual": 1.939081531628084e-09
+    },
+    "choquistic_slsqp": {
+     "sec": 0.045002899947576225,
+     "nll": 0.6008531970601746,
+     "converged": true,
+     "gamma": 7.082971335379674,
+     "max_violation": 2.220446049250313e-16,
+     "nit": 45
+    }
+   }
+  },
+  {
+   "case": "sim_p10",
+   "n": 500,
+   "p": 10,
+   "n_vars": 101,
+   "rows": {
+    "reparam_lbfgsb": {
+     "sec": 0.2449301000451669,
+     "obj": 0.6612479546390797,
+     "margin": 0.0,
+     "converged": true,
+     "nit": 104,
+     "restarts": 0,
+     "kkt_residual": 3.4305046935460826e-06
+    },
+    "lincon_trust": {
+     "sec": 15.510614799917676,
+     "obj": 0.6612483725511091,
+     "margin": 1.5573488626382392e-05,
+     "converged": true,
+     "nit": 175,
+     "max_violation": 0.0
+    },
+    "lincon_slsqp": {
+     "sec": 1.6851979999337345,
+     "obj": 0.6612479542566301,
+     "margin": -1.1102230246251565e-16,
+     "converged": true,
+     "nit": 112,
+     "max_violation": 1.4084299540553682e-16
+    },
+    "reparam_lbfgsb_ml": {
+     "sec": 0.295898100011982,
+     "nll": 0.6478438975487304,
+     "margin": 0.0,
+     "converged": true,
+     "S": 5.882472708182306,
+     "restarts": 0,
+     "kkt_residual": 9.321194538881167e-09
+    },
+    "choquistic_slsqp": {
+     "sec": 1.1068840000079945,
+     "nll": 0.6478438975490841,
+     "converged": true,
+     "gamma": 5.882472142629234,
+     "max_violation": 2.2124294301468858e-16,
+     "nit": 53
+    }
+   }
+  },
+  {
+   "case": "sim_p15",
+   "n": 500,
+   "p": 15,
+   "n_vars": 226,
+   "rows": {
+    "reparam_lbfgsb": {
+     "sec": 0.5169150000438094,
+     "obj": 0.6531338098332661,
+     "margin": 0.0,
+     "converged": true,
+     "nit": 168,
+     "restarts": 1,
+     "kkt_residual": 2.161754671008609e-06
+    },
+    "lincon_trust": {
+     "sec": 58.55899759999011,
+     "obj": 0.65313484733996,
+     "margin": 1.2837884731577707e-05,
+     "converged": true,
+     "nit": 248,
+     "max_violation": 0.0
+    },
+    "lincon_slsqp": {
+     "sec": 13.913720899960026,
+     "obj": 0.6531338088826251,
+     "margin": -1.211296639446272e-16,
+     "converged": true,
+     "nit": 136,
+     "max_violation": 1.3639069701211554e-16
+    },
+    "reparam_lbfgsb_ml": {
+     "sec": 1.1298876999644563,
+     "nll": 0.6317527090013135,
+     "margin": 0.0,
+     "converged": true,
+     "S": 7.826607710235742,
+     "restarts": 0,
+     "kkt_residual": 6.0320289024112794e-09
+    },
+    "choquistic_slsqp": {
+     "sec": 6.636460900073871,
+     "nll": 0.6317527090021167,
+     "converged": true,
+     "gamma": 7.8266072749200255,
+     "max_violation": 7.008282842946301e-16,
+     "nit": 49
+    }
+   }
+  },
+  {
+   "case": "sim_p20",
+   "n": 500,
+   "p": 20,
+   "n_vars": 401,
+   "rows": {
+    "reparam_lbfgsb": {
+     "sec": 0.8544646999798715,
+     "obj": 0.6512898838710537,
+     "margin": 0.0,
+     "converged": true,
+     "nit": 204,
+     "restarts": 0,
+     "kkt_residual": 6.732425764321981e-06
+    },
+    "lincon_trust": {
+     "sec": 365.81961139990017,
+     "obj": 0.6512915249952114,
+     "margin": 2.0046341204756138e-05,
+     "converged": true,
+     "nit": 392,
+     "max_violation": 0.0
+    },
+    "lincon_slsqp": {
+     "sec": 70.88656780007295,
+     "obj": 0.6512898694760111,
+     "margin": -1.1102230246251565e-16,
+     "converged": true,
+     "nit": 150,
+     "max_violation": 1.3877787807814457e-16
+    },
+    "reparam_lbfgsb_ml": {
+     "sec": 1.3640577000332996,
+     "nll": 0.6243516218608436,
+     "margin": -1.1102230246251565e-16,
+     "converged": true,
+     "S": 11.551529652260648,
+     "restarts": 0,
+     "kkt_residual": 1.070940992137226e-08
+    },
+    "choquistic_slsqp": {
+     "sec": 30.856037700083107,
+     "nll": 0.6243516218610213,
+     "converged": true,
+     "gamma": 11.551523960491776,
+     "max_violation": 1.3739009929736312e-15,
+     "nit": 47
+    }
+   }
+  },
+  {
+   "case": "POL252",
+   "n": 252,
+   "p": 25,
+   "n_vars": 626,
+   "rows": {
+    "reparam_lbfgsb": {
+     "sec": 0.5125509999925271,
+     "obj": 0.26978030614072024,
+     "margin": 0.0,
+     "converged": true,
+     "nit": 225,
+     "restarts": 0,
+     "kkt_residual": 4.919039537131312e-06
+    },
+    "lincon_trust": {
+     "sec": 1409.1041469000047,
+     "obj": 0.2697829934032794,
+     "margin": 3.419249876812827e-05,
+     "converged": true,
+     "nit": 509,
+     "max_violation": 0.0
+    },
+    "lincon_slsqp": {
+     "sec": 402.3116115999874,
+     "obj": 0.2697802849461936,
+     "margin": -4.163336342344337e-16,
+     "converged": true,
+     "nit": 242,
+     "max_violation": 4.718447854656915e-16
+    },
+    "reparam_lbfgsb_ml": {
+     "sec": 3.1598537999670953,
+     "nll": 0.1849590254405208,
+     "margin": 0.0,
+     "converged": true,
+     "S": 40.46638818800616,
+     "restarts": 0,
+     "kkt_residual": 1.2428302476573394e-08
+    },
+    "choquistic_slsqp": {
+     "sec": 173.12122890003957,
+     "nll": 0.18495902544018533,
+     "converged": true,
+     "gamma": 40.4663929485699,
+     "max_violation": 6.946974726427448e-15,
+     "nit": 72
+    }
+   }
+  },
+  {
+   "case": "sim_p30",
+   "n": 500,
+   "p": 30,
+   "n_vars": 901,
+   "rows": {
+    "reparam_lbfgsb": {
+     "sec": 3.0307181000243872,
+     "obj": 0.6437777049953867,
+     "margin": -1.1102230246251565e-16,
+     "converged": true,
+     "nit": 263,
+     "restarts": 1,
+     "kkt_residual": 6.325719357279098e-06
+    },
+    "lincon_trust": null,
+    "lincon_slsqp": {
+     "sec": 936.2556574000046,
+     "obj": 0.6437776990698226,
+     "margin": -3.191891195797325e-16,
+     "converged": true,
+     "nit": 178,
+     "max_violation": 3.677613769070831e-16
+    },
+    "reparam_lbfgsb_ml": {
+     "sec": 5.535493899951689,
+     "nll": 0.6041599584449784,
+     "margin": 0.0,
+     "converged": true,
+     "S": 15.583601687064489,
+     "restarts": 0,
+     "kkt_residual": 1.054084359554397e-08
+    },
+    "choquistic_slsqp": {
+     "sec": 392.97423599998,
+     "nll": 0.6041599584451445,
+     "converged": true,
+     "gamma": 15.58360766156682,
+     "max_violation": 5.910202882652982e-15,
+     "nit": 50
+    }
+   }
+  },
+  {
+   "case": "sim_p40",
+   "n": 500,
+   "p": 40,
+   "n_vars": 1601,
+   "rows": {
+    "reparam_lbfgsb": {
+     "sec": 6.166007300023921,
+     "obj": 0.640627541085596,
+     "margin": 0.0,
+     "converged": true,
+     "nit": 333,
+     "restarts": 0,
+     "kkt_residual": 6.4321548199298886e-06
+    },
+    "lincon_trust": null,
+    "lincon_slsqp": null,
+    "reparam_lbfgsb_ml": {
+     "sec": 7.192982599954121,
+     "nll": 0.5896566718465366,
+     "margin": -1.1102230246251565e-16,
+     "converged": true,
+     "S": 21.181296263389438,
+     "restarts": 0,
+     "kkt_residual": 3.5307222696293744e-08
+    },
+    "choquistic_slsqp": {
+     "sec": 2676.44352109998,
+     "nll": 0.5896566718460131,
+     "converged": true,
+     "gamma": 21.181319785118017,
+     "max_violation": 2.5118795932144167e-14,
+     "nit": 52
+    }
+   }
+  }
+ ],
+ "runtime_sec": 71.07690048217773
+}

@@ -1,0 +1,79 @@
+{
+ "equivalence": {
+  "2": {
+   "n": 1818,
+   "agree": 1818,
+   "n_monotone": 1738.0
+  },
+  "3": {
+   "n": 1818,
+   "agree": 1818,
+   "n_monotone": 1581.0
+  },
+  "4": {
+   "n": 1818,
+   "agree": 1818,
+   "n_monotone": 1440.0
+  },
+  "5": {
+   "n": 1818,
+   "agree": 1818,
+   "n_monotone": 1323.0
+  },
+  "6": {
+   "n": 1818,
+   "agree": 1818,
+   "n_monotone": 1250.0
+  },
+  "7": {
+   "n": 1818,
+   "agree": 1818,
+   "n_monotone": 1237.0
+  },
+  "8": {
+   "n": 1818,
+   "agree": 1818,
+   "n_monotone": 1216.0
+  },
+  "9": {
+   "n": 300,
+   "agree": 300,
+   "n_monotone": 200.0
+  },
+  "10": {
+   "n": 300,
+   "agree": 300,
+   "n_monotone": 200.0
+  },
+  "11": {
+   "n": 300,
+   "agree": 300,
+   "n_monotone": 200.0
+  },
+  "12": {
+   "n": 300,
+   "agree": 300,
+   "n_monotone": 200.0
+  }
+ },
+ "choquet_formula": {
+  "max_abs_err_sort_vs_mobius": 1.3322676295501878e-15,
+  "n": 3000
+ },
+ "necessity": {
+  "n_nonmonotone_measures": 1265,
+  "n_with_decreasing_pair": 1265
+ },
+ "equivalence_total": {
+  "n": 13926,
+  "mismatches": 0
+ },
+ "g3_solution": {
+  "max_mplus_times_mminus": 0.0,
+  "n_both_positive": 0,
+  "closed_form_margin": 0.0,
+  "min_s": 0.0,
+  "n_edges": 12,
+  "converged": true
+ }
+}

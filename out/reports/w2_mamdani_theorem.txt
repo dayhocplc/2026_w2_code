@@ -1,0 +1,50 @@
+W2-1 — ĐỊNH LÝ 1 (tầng Mamdani): kiểm chứng số
+
+1. Phân hoạch Ruspini có thứ tự
+  MF_D       |Σμ−1|max=1.11e-16 minΣ=1.000 tăng F_j max=1.11e-16 → True
+  MF_LAG     |Σμ−1|max=0 minΣ=1.000 tăng F_j max=0 → True
+  MF_D_V1    |Σμ−1|max=0.5 minΣ=0.500 tăng F_j max=0.000133 → False
+  MF_LAG_V1  |Σμ−1|max=0.7 minΣ=0.300 tăng F_j max=0.0002 → False
+  Bảng luật: [[0, 0, 1], [0, 1, 2], [1, 2, 2]] đơn điệu=True bước nhảy max=1
+
+2. Bổ đề (L): w(x) tăng theo FOSD? (mức giảm đuôi lớn nhất; |Σw−1|)
+  original MFs + max             drop_d=0.0400 drop_LAG=0.0125 |Σw−1|=0.904
+  original MFs + bounded sum     drop_d=0.0400 drop_LAG=0.0125 |Σw−1|=0.850
+  Ruspini + max                  drop_d=0.0286 drop_LAG=0.0067 |Σw−1|=0.500
+  Ruspini + probabilistic sum    drop_d=0.0278 drop_LAG=0.0066 |Σw−1|=0.250
+  Ruspini + bounded sum          drop_d=0.0000 drop_LAG=0.0000 |Σw−1|=0.000
+
+3. Bảng 5.14 tái lập (tổng mức giảm trên lưới 0,01×0,01; thang 0–100) | cài đặt độc lập
+  original MFs + max             d  547.566 LAG  244.388 |  547.566  244.388
+  original MFs + bounded sum     d  292.127 LAG  186.040 |  292.127  186.040
+  Ruspini + max                  d  227.859 LAG   85.642 |  227.859   85.642
+  Ruspini + probabilistic sum    d   32.479 LAG   13.427 |   32.479   13.427
+  Ruspini + bounded sum          d    0.000 LAG    0.000 |    0.000    0.000
+  t-norm min (Ruspini + tổng chặn): vi phạm (0.0, 1.4210854715202004e-14), FOSD {'max_tail_drop_d': 0.028571428571428914, 'max_tail_drop_lag': 0.010000000000000231, 'max_abs_sum_w_minus_1': 0.9777777777777779}
+  Bảng luật không trơn [[0, 0, 2], [0, 2, 2], [2, 2, 2]]: tổng chặn (0.0, 0.0) | cực đại (632.1934222723122, 205.87171235712697)
+  Biến thể phép hội / kéo theo / gộp (Ruspini; vi phạm theo d, LAG):
+    smooth    hội=product kéo theo=min     gộp=max           227.859    85.642
+    smooth    hội=product kéo theo=min     gộp=bounded_sum     0.000     0.000
+    smooth    hội=product kéo theo=product gộp=max             0.000     0.000
+    smooth    hội=product kéo theo=product gộp=bounded_sum     0.000     0.000
+    smooth    hội=min     kéo theo=min     gộp=max           368.396   136.117
+    smooth    hội=min     kéo theo=min     gộp=bounded_sum     0.000     0.000
+    nonsmooth hội=product kéo theo=min     gộp=max           632.193   205.872
+    nonsmooth hội=product kéo theo=min     gộp=bounded_sum     0.000     0.000
+    nonsmooth hội=product kéo theo=product gộp=max             0.000     0.000
+    nonsmooth hội=product kéo theo=product gộp=bounded_sum     0.000     0.000
+    nonsmooth hội=min     kéo theo=min     gộp=max           922.150   341.612
+    nonsmooth hội=min     kéo theo=min     gộp=bounded_sum     0.000     0.000
+
+4. Chứng nhận (D) — trọng tâm max–min, universe rời rạc bước 0,5
+  111 ngưỡng, 336 đường, 12392 đỉnh, 293424 cặp (ô, đỉnh); 712s
+  đạo hàm theo hướng nhỏ nhất: {'e2-e1': 11.71830985915491, 'e3-e2': 11.718309859154928}  tại {'e2-e1': [0.0, 0.0, 1.0], 'e3-e2': [1.0, -0.0, 0.0]}
+  sai phân lưới N=300: {'min_fd_e2-e1': 12.129105044778044, 'min_fd_e3-e2': 11.89439853277463, 'N': 300}
+  universe mịn (20001 điểm), N=120: {'min_fd_e2-e1': 11.483186739269513, 'min_fd_e3-e2': 10.170774267237448, 'N': 120}
+  SAM giải tích: {'areas': [35.5, 50.0, 35.5], 'centroids': [11.5, 50.0, 88.5], 'min_sign_quantity': 808.5, 'holds': True}; sai phân {'min_fd_e2-e1': 22.984318235330647, 'min_fd_e3-e2': 22.859656851892396, 'N': 150}
+  Phản ví dụ kết luận lệch: đạo hàm nhỏ nhất {'e2-e1': -32.615736508490336, 'e3-e2': 27.37224335435421} tại {'e2-e1': [0.8, -0.0, 0.2], 'e3-e2': [0.0, 0.525, 0.475]}
+  Phản ví dụ khả đạt, bảng luật [[0, 2, 2], [1, 2, 2], [1, 2, 2]], skewed_consequents: vi phạm (389.53394384368414, 0.0), đường d∈{0,.1,.2,.3,.45} tại LAG=0,2: [60.74, 57.22, 56.59, 56.93, 58.58]
+  Phản ví dụ khả đạt, bảng luật [[0, 2, 2], [1, 2, 2], [1, 2, 2]], project_consequents: vi phạm (2.8350655156827997e-12, 0.0), đường d∈{0,.1,.2,.3,.45} tại LAG=0,2: [31.6, 37.59, 42.91, 47.96, 56.81]
+
+5. Thử căng thẳng ngẫu nhiên: {"bounded_sum": {"n": 400, "n_violating": 0, "max_violation": 5.7767124417296145e-12, "n_violating_nonsmooth": 0, "n_violating_smooth": 0}, "max": {"n": 400, "n_violating": 395, "max_violation": 3156.7960681666204, "n_violating_nonsmooth": 236, "n_violating_smooth": 159}, "n_nonsmooth_rulebases": 237}
+Thời gian 3528s

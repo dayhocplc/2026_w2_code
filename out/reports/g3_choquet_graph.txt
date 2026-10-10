@@ -1,0 +1,51 @@
+G3 — ĐỒ THỊ TƯƠNG TÁC CHOQUET 2-CỘNG TÍNH THƯA, ĐƠN ĐIỆU (Q-CHAT-25 Ba Lan)
+n=252 (135 ASD / 117 chứng), 5-fold × 10, seed 20260827, λ ∈ [0.01, 0.003, 0.001, 0.0003] chọn bằng CV trong 3-fold, γ=0.001. Thời gian 1051s
+Kiểm tra: |Möbius − choquet_2additive dự án| max = 2.22e-16
+AUC toàn mẫu (điểm cố định): raw_sum_25 0.8515, qchat10_sum 0.9404, shapley_domain_clinical 0.9127, choquet_clinical_interactions 0.9046
+
+AUC ngoài fold (trung bình ± SD, 50 fold)
+  item_graph                       0.9338 ± 0.0300
+  item_graph_unconstrained         0.9310 ± 0.0305
+  item_additive_monotone           0.9337 ± 0.0302
+  domain_graph                     0.9172 ± 0.0377
+  domain_graph_unconstrained       0.9175 ± 0.0369
+  domain_additive_monotone         0.9174 ± 0.0377
+  linear_l1_logistic               0.9347 ± 0.0298
+  pairwise_l1_logistic             0.9310 ± 0.0312
+  raw_sum_25                       0.8521 ± 0.0519
+  qchat10_sum                      0.9410 ± 0.0307
+  shapley_domain_clinical          0.9144 ± 0.0391
+  choquet_clinical_interactions    0.9067 ± 0.0396
+
+So sánh (Nadeau–Bengio, BH trên 12 phép so sánh)
+  item_graph                 − raw_sum_25                     Δ=+0.0817 [+0.0345;+0.1290] p=0.001 p_BH=0.013
+  item_graph                 − shapley_domain_clinical        Δ=+0.0194 [-0.0066;+0.0453] p=0.140 p_BH=0.424
+  item_graph                 − item_additive_monotone         Δ=+0.0000 [-0.0074;+0.0074] p=0.994 p_BH=0.994
+  item_graph                 − pairwise_l1_logistic           Δ=+0.0028 [-0.0157;+0.0213] p=0.763 p_BH=0.994
+  item_graph                 − qchat10_sum                    Δ=-0.0072 [-0.0276;+0.0132] p=0.481 p_BH=0.965
+  item_graph                 − linear_l1_logistic             Δ=-0.0009 [-0.0135;+0.0116] p=0.881 p_BH=0.994
+  item_graph                 − item_graph_unconstrained       Δ=+0.0028 [-0.0109;+0.0164] p=0.686 p_BH=0.994
+  domain_graph               − shapley_domain_clinical        Δ=+0.0028 [-0.0052;+0.0108] p=0.483 p_BH=0.965
+  domain_graph               − domain_additive_monotone       Δ=-0.0002 [-0.0011;+0.0008] p=0.745 p_BH=0.994
+  domain_graph               − domain_graph_unconstrained     Δ=-0.0002 [-0.0069;+0.0064] p=0.941 p_BH=0.994
+  domain_graph               − choquet_clinical_interactions  Δ=+0.0105 [-0.0021;+0.0231] p=0.100 p_BH=0.424
+  item_graph                 − domain_graph                   Δ=+0.0166 [-0.0057;+0.0388] p=0.141 p_BH=0.424
+
+Cạnh ổn định mức mục (chọn ở ≥ 70% fold): 0
+15 cạnh hay chọn nhất: Q3–Q4 0.66(+33/−0); Q3–Q7 0.62(+0/−31); Q9–Q10 0.58(+0/−29); Q5–Q15 0.56(+28/−0); Q15–Q22 0.54(+27/−0); Q2–Q17 0.48(+0/−24); Q5–Q22 0.46(+23/−0); Q1–Q3 0.44(+22/−0); Q9–Q15 0.44(+0/−22); Q11–Q25 0.44(+19/−3); Q2–Q15 0.44(+22/−0); Q4–Q15 0.40(+0/−20); Q3–Q22 0.36(+18/−0); Q3–Q6 0.36(+18/−0); Q2–Q11 0.34(+17/−0)
+Tỉ lệ cạnh được chọn nằm trong cùng lĩnh vực: 0.34 (cơ sở ngẫu nhiên 0.30)
+
+Mức lĩnh vực — I học được (chuẩn hoá) so với bộ lâm sàng
+  GTNN –BCHOC f=0.06 mean I=+0.0044 median=+0.0000 (+3/−0)  lâm sàng +0.10
+  GTNN –CNXH  f=0.02 mean I=+0.0022 median=+0.0000 (+1/−0)  lâm sàng +0.18
+  GTNN –DHBT  f=0.00 mean I=+0.0000 median=+0.0000 (+0/−0)  lâm sàng +0.00
+  BCHOC–CNXH  f=0.02 mean I=+0.0001 median=+0.0000 (+1/−0)  lâm sàng +0.10
+  BCHOC–DHBT  f=0.00 mean I=+0.0000 median=+0.0000 (+0/−0)  lâm sàng +0.00
+  CNXH –DHBT  f=0.00 mean I=+0.0000 median=+0.0000 (+0/−0)  lâm sàng +0.08
+  φ học được: GTNN 0.358, BCHOC 0.233, CNXH 0.408, DHBT 0.000 | φ lâm sàng: GTNN 0.263, BCHOC 0.197, CNXH 0.263, DHBT 0.080
+
+Đơn điệu
+  item: {"folds_with_active_constraint": 0.66, "mean_active_nodes": 6.3, "mean_zero_nodes": 6.48, "max_pre_repair_violation": 0.0, "min_monotone_margin": -2.220446049250313e-16, "unconstrained_folds_nonmonotone": 1.0, "unconstrained_mean_nonmonotone_nodes": 11.74, "mean_edges": 13.6, "mean_edges_unconstrained": 17.66, "lambda_counts": {"0.01": 17, "0.003": 26, "0.001": 6, "0.0003": 1}, "n_flipped_mean": 4.92}
+  domain: {"folds_with_active_constraint": 0.0, "mean_active_nodes": 0.0, "mean_zero_nodes": 1.0, "max_pre_repair_violation": 0.0, "min_monotone_margin": 0.0, "unconstrained_folds_nonmonotone": 1.0, "unconstrained_mean_nonmonotone_nodes": 1.0, "mean_edges": 0.1, "mean_edges_unconstrained": 0.06, "lambda_counts": {"0.01": 47, "0.003": 3, "0.001": 0, "0.0003": 0}, "n_flipped_mean": 0.0}
+
+Đồ thị toàn mẫu (minh hoạ, λ=0.003): 12 cạnh: Q2–Q15 +0.083; Q5–Q15 +0.072; Q3–Q7 -0.054; Q3–Q4 +0.054; Q9–Q10 -0.048; Q1–Q3 +0.046; Q2–Q17 -0.028; Q9–Q15 -0.024; Q3–Q6 +0.021; Q5–Q22 +0.014; Q15–Q22 +0.012; Q24–Q25 -0.007

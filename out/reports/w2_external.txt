@@ -1,0 +1,71 @@
+W2-3/W2-4 — Choquet 2-cộng tính đơn điệu trên 4 bộ dữ liệu, 5-fold × 10
+
+[POL252] Q-CHAT Poland: n=252, p=25, dương=0.54
+  choquet_graph            0.9362 ± 0.0322
+  choquet_unconstrained    0.9327 ± 0.0360
+  additive_monotone        0.9351 ± 0.0333
+  choquistic_ml            0.9155 ± 0.0387
+  lgbm_monotone            0.9349 ± 0.0287
+  linear_l1_logistic       0.9373 ± 0.0338
+  pairwise_l1_logistic     0.9412 ± 0.0290
+  choquet_graph − choquet_unconstrained    Δ=+0.0035 [-0.0083;+0.0153] p=0.556 p_BH=0.871
+  choquet_graph − additive_monotone        Δ=+0.0011 [-0.0061;+0.0083] p=0.753 p_BH=0.871
+  choquet_graph − choquistic_ml            Δ=+0.0208 [-0.0006;+0.0421] p=0.057 p_BH=0.341
+  choquet_graph − lgbm_monotone            Δ=+0.0013 [-0.0136;+0.0163] p=0.860 p_BH=0.871
+  choquet_graph − linear_l1_logistic       Δ=-0.0011 [-0.0145;+0.0123] p=0.871 p_BH=0.871
+  choquet_graph − pairwise_l1_logistic     Δ=-0.0050 [-0.0162;+0.0062] p=0.373 p_BH=0.871
+  đơn điệu: {"folds_active": 0.6, "mean_active": 6.4, "min_margin": -4.440892098500626e-16, "unc_folds_nonmonotone": 1.0, "unc_mean_nonmonotone_nodes": 11.48, "mean_edges": 12.84, "mean_edges_unc": 16.28, "mean_flip": 4.8, "solver_fits": 800, "solver_restarted": 35, "v1_max_abs_auc_change": 0.020061728395061706}
+  chi phí: {"sec_choquet_graph_median": 1.2719794000149705, "n_slsqp_folds": 15, "sec_reparam_ml_median": 4.650816599954851, "sec_choquistic_median": 369.9597423999803, "choquistic_converged_frac": 1.0, "test_auc_gap_reparam_ml_minus_slsqp": {"max_abs": 0.032206119162640934, "mean": 0.002147074610842729}, "auc_choquistic_slsqp_mean_subset": 0.9132447665056361, "auc_reparam_ml_mean_subset": 0.9153918411164789, "train_logloss_gap_reparam_minus_choquistic": {"median": -4.2549297418759124e-14, "max": 7.970013538027843e-13, "min": -2.3166851904177434e-10}, "auc_reparam_ml_mean": 0.9154616210413312}
+
+[PARK195] Parkinson voice: n=195, p=22, dương=0.75
+  choquet_graph            0.9311 ± 0.0400
+  choquet_unconstrained    0.9562 ± 0.0310
+  additive_monotone        0.8946 ± 0.0421
+  choquistic_ml            0.9297 ± 0.0404
+  lgbm_monotone            0.9318 ± 0.0382
+  linear_l1_logistic       0.9019 ± 0.0424
+  pairwise_l1_logistic     0.9490 ± 0.0288
+  choquet_graph − choquet_unconstrained    Δ=-0.0251 [-0.0557;+0.0056] p=0.106 p_BH=0.317
+  choquet_graph − additive_monotone        Δ=+0.0365 [+0.0137;+0.0593] p=0.002 p_BH=0.014
+  choquet_graph − choquistic_ml            Δ=+0.0014 [-0.0058;+0.0086] p=0.693 p_BH=0.832
+  choquet_graph − lgbm_monotone            Δ=-0.0007 [-0.0212;+0.0198] p=0.944 p_BH=0.944
+  choquet_graph − linear_l1_logistic       Δ=+0.0292 [-0.0118;+0.0702] p=0.159 p_BH=0.317
+  choquet_graph − pairwise_l1_logistic     Δ=-0.0180 [-0.0566;+0.0206] p=0.354 p_BH=0.532
+  đơn điệu: {"folds_active": 1.0, "mean_active": 4.18, "min_margin": 0.0, "unc_folds_nonmonotone": 1.0, "unc_mean_nonmonotone_nodes": 15.14, "mean_edges": 12.0, "mean_edges_unc": 25.16, "mean_flip": 4.0, "solver_fits": 800, "solver_restarted": 60, "v1_max_abs_auc_change": 0.051724137931034586}
+  chi phí: {"sec_choquet_graph_median": 1.2925524999736808, "n_slsqp_folds": 10, "sec_reparam_ml_median": 2.618735900032334, "sec_choquistic_median": 86.18995564995566, "choquistic_converged_frac": 1.0, "test_auc_gap_reparam_ml_minus_slsqp": {"max_abs": 0.0, "mean": 0.0}, "auc_choquistic_slsqp_mean_subset": 0.9292975734355042, "auc_reparam_ml_mean_subset": 0.9292975734355042, "train_logloss_gap_reparam_minus_choquistic": {"median": 5.101474798152594e-14, "max": 1.7638668303732175e-13, "min": -1.907363156306019e-13}, "auc_reparam_ml_mean": 0.9296526181353768}
+
+[BCW683] Breast cancer Wisconsin (original): n=683, p=9, dương=0.35
+  choquet_graph            0.9957 ± 0.0030
+  choquet_unconstrained    0.9957 ± 0.0030
+  additive_monotone        0.9957 ± 0.0030
+  choquistic_ml            0.9949 ± 0.0031
+  lgbm_monotone            0.9944 ± 0.0035
+  linear_l1_logistic       0.9951 ± 0.0033
+  pairwise_l1_logistic     0.9946 ± 0.0046
+  choquet_graph − choquet_unconstrained    Δ=+0.0000 [-0.0000;+0.0000] p=1.000 p_BH=1.000
+  choquet_graph − additive_monotone        Δ=+0.0000 [-0.0000;+0.0000] p=1.000 p_BH=1.000
+  choquet_graph − choquistic_ml            Δ=+0.0008 [-0.0006;+0.0022] p=0.263 p_BH=0.700
+  choquet_graph − lgbm_monotone            Δ=+0.0013 [-0.0005;+0.0030] p=0.145 p_BH=0.700
+  choquet_graph − linear_l1_logistic       Δ=+0.0005 [-0.0007;+0.0018] p=0.394 p_BH=0.700
+  choquet_graph − pairwise_l1_logistic     Δ=+0.0010 [-0.0018;+0.0038] p=0.467 p_BH=0.700
+  đơn điệu: {"folds_active": 0.0, "mean_active": 0.0, "min_margin": 0.39799770860939476, "unc_folds_nonmonotone": 0.0, "unc_mean_nonmonotone_nodes": 0.0, "mean_edges": 0.0, "mean_edges_unc": 0.0, "mean_flip": 0.0, "solver_fits": 800, "solver_restarted": 3, "v1_max_abs_auc_change": 0.0}
+  chi phí: {"sec_choquet_graph_median": 0.10224340000422671, "n_slsqp_folds": 10, "sec_reparam_ml_median": 0.7517046499415301, "sec_choquistic_median": 1.372193299990613, "choquistic_converged_frac": 1.0, "test_auc_gap_reparam_ml_minus_slsqp": {"max_abs": 1.1102230246251565e-16, "mean": 1.1102230246251566e-17}, "auc_choquistic_slsqp_mean_subset": 0.9945440577481726, "auc_reparam_ml_mean_subset": 0.9945440577481726, "train_logloss_gap_reparam_minus_choquistic": {"median": -1.592163900721033e-13, "max": 9.044154314352681e-14, "min": -1.5252937801690791e-12}, "auc_reparam_ml_mean": 0.9948705042143886}
+
+[HEART303] Cleveland heart disease: n=303, p=13, dương=0.46
+  choquet_graph            0.9093 ± 0.0326
+  choquet_unconstrained    0.9044 ± 0.0372
+  additive_monotone        0.9120 ± 0.0320
+  choquistic_ml            0.9006 ± 0.0348
+  lgbm_monotone            0.9063 ± 0.0338
+  linear_l1_logistic       0.9081 ± 0.0332
+  pairwise_l1_logistic     0.9025 ± 0.0353
+  choquet_graph − choquet_unconstrained    Δ=+0.0049 [-0.0134;+0.0232] p=0.596 p_BH=0.792
+  choquet_graph − additive_monotone        Δ=-0.0027 [-0.0085;+0.0030] p=0.345 p_BH=0.762
+  choquet_graph − choquistic_ml            Δ=+0.0086 [-0.0110;+0.0283] p=0.381 p_BH=0.762
+  choquet_graph − lgbm_monotone            Δ=+0.0030 [-0.0144;+0.0203] p=0.732 p_BH=0.792
+  choquet_graph − linear_l1_logistic       Δ=+0.0011 [-0.0075;+0.0098] p=0.792 p_BH=0.792
+  choquet_graph − pairwise_l1_logistic     Δ=+0.0068 [-0.0056;+0.0192] p=0.277 p_BH=0.762
+  đơn điệu: {"folds_active": 0.24, "mean_active": 1.58, "min_margin": -2.220446049250313e-16, "unc_folds_nonmonotone": 0.98, "unc_mean_nonmonotone_nodes": 3.5, "mean_edges": 5.08, "mean_edges_unc": 9.32, "mean_flip": 1.16, "solver_fits": 800, "solver_restarted": 5, "v1_max_abs_auc_change": 0.0}
+  chi phí: {"sec_choquet_graph_median": 0.23254469991661608, "n_slsqp_folds": 10, "sec_reparam_ml_median": 0.9420933999936096, "sec_choquistic_median": 3.2822329500340857, "choquistic_converged_frac": 1.0, "test_auc_gap_reparam_ml_minus_slsqp": {"max_abs": 0.0, "mean": 0.0}, "auc_choquistic_slsqp_mean_subset": 0.9010662177328843, "auc_reparam_ml_mean_subset": 0.9010662177328843, "train_logloss_gap_reparam_minus_choquistic": {"median": -3.6014247140059297e-13, "max": -2.1443957720634899e-13, "min": -5.636074940085223e-11}, "auc_reparam_ml_mean": 0.9006338433942602}
+
+Thời gian 21s

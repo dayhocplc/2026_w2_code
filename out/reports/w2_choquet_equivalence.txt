@@ -1,0 +1,17 @@
+W2-2 — ĐỊNH LÝ 2: (G) Grabisch ⇔ (C) dạng đóng ⇔ (R) tham số hoá lại
+
+  p= 2: 1818/1818 khớp (1738 đơn điệu)
+  p= 3: 1818/1818 khớp (1581 đơn điệu)
+  p= 4: 1818/1818 khớp (1440 đơn điệu)
+  p= 5: 1818/1818 khớp (1323 đơn điệu)
+  p= 6: 1818/1818 khớp (1250 đơn điệu)
+  p= 7: 1818/1818 khớp (1237 đơn điệu)
+  p= 8: 1818/1818 khớp (1216 đơn điệu)
+  p= 9: 300/300 khớp (200 đơn điệu)
+  p=10: 300/300 khớp (200 đơn điệu)
+  p=11: 300/300 khớp (200 đơn điệu)
+  p=12: 300/300 khớp (200 đơn điệu)
+  Tổng: {'n': 13926, 'mismatches': 0}
+  Choquet sắp xếp vs Möbius: {'max_abs_err_sort_vs_mobius': np.float64(1.3322676295501878e-15), 'n': 3000}
+  Tính cần: {'n_nonmonotone_measures': 1265, 'n_with_decreasing_pair': 1265}
+  Nghiệm G3 (POL252, λ=3e-3): {'max_mplus_times_mminus': 0.0, 'n_both_positive': 0, 'closed_form_margin': 0.0, 'min_s': 0.0, 'n_edges': 12, 'converged': True}
